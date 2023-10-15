@@ -18,6 +18,3 @@ class WorldCupEditionsModel(models.Model):
     national_teams = models.ManyToManyField(NationalTeamsModels, null=True, blank=True)
     stadiums = models.ForeignKey(StadiumsModels, on_delete=models.DO_NOTHING, to_field='name', null=True)
     mvp = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
