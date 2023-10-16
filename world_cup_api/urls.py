@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/v1/', include('editions.urls', namespace='editions')),
     path('api/v1/', include('stadiums.urls', namespace='stadiums')),
     path('api/v1/', include('national_teams.urls', namespace='national-teams')),
+    path('api/v1/', include('host_countries.urls', namespace='host-countries')),
 ]
