@@ -11,3 +11,6 @@ class IRepository(ABC):
             return self.model.objects.get(*args, **kwargs)
         except ObjectDoesNotExist:
             return None
+
+    def create(self, **fields) -> model:
+        return self.model.objects.create(**fields)

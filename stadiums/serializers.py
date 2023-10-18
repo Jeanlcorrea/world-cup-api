@@ -6,3 +6,4 @@ class StadiumsSerializer(serializers.Serializer):
     city = serializers.CharField(max_length=50)
     owner = serializers.CharField(max_length=50)
     capacity = serializers.IntegerField()
+    host_country = serializers.CharField(max_length=50)

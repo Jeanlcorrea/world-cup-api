@@ -3,7 +3,7 @@ from rest_framework.exceptions import ValidationError
 from stadiums.contracts.repositories import IStadiumsRepository
 
 
-class ValidateStadiumsService:
+class ValidateStadiumsUseCase:
 
     def __init__(self, stadiums_repository: IStadiumsRepository):
         self.stadiums_repository = stadiums_repository
