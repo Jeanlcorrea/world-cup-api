@@ -1,5 +1,5 @@
 from stadiums.contracts.repositories import IStadiumsRepository
-from stadiums.repositories.database_search import DataBaseSearchAtStadiums
+from stadiums.repositories.database import DataBaseSearchAtStadiums
 
 
 class StadiumsFactories:

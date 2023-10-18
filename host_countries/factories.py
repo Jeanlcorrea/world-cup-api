@@ -1,9 +1,9 @@
-from host_countries.services.validate_stadiums_service import ValidateStadiumsService
-from stadiums.factories import StadiumsFactories
+from host_countries.contracts.repositories import IHostCountriesRepository
+from host_countries.repositories.database import DataBaseHostCountriesRepository
 
 
 class HostCountriesFactories:
 
     @staticmethod
-    def make_validate_stadiums_service() -> ValidateStadiumsService:
-        return ValidateStadiumsService(stadiums_repository=StadiumsFactories.make_stadiums_repository())
+    def make_host_cities_repository() -> IHostCountriesRepository:
+        return DataBaseHostCountriesRepository()
