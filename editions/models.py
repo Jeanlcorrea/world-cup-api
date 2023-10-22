@@ -4,8 +4,6 @@ from django.db import models
 
 from editions.enums import WorldCupWinners
 from host_countries.models import HostCountriesModels
-from national_teams.models import NationalTeamsModels
-from stadiums.models import StadiumsModels
 
 
 class WorldCupEditionsModel(models.Model):
@@ -15,6 +13,4 @@ class WorldCupEditionsModel(models.Model):
     winner = models.CharField(max_length=10, choices=WorldCupWinners.choices())
     edition_number = models.IntegerField()
     host_countries = models.ForeignKey(HostCountriesModels, on_delete=models.DO_NOTHING, to_field='name', null=True)
-    national_teams = models.ManyToManyField(NationalTeamsModels, null=True, blank=True)
-    stadiums = models.ForeignKey(StadiumsModels, on_delete=models.DO_NOTHING, to_field='name', null=True)
     mvp = models.CharField(max_length=50)
